@@ -31,8 +31,7 @@ def build_retriever(vectorstore):
     return vectorstore.as_retriever(
         search_type="mmr",
         search_kwargs={
-            "k": 5,
-            "score_threshold": 0.5,
+            "k": 3,
             "fetch_k": 20,
             "lambda_mult": 0.5,
         },
